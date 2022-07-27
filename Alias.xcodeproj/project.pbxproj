@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		659116DF28916C9C007D837B /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659116DE28916C9C007D837B /* UIButtonExtension.swift */; };
+		659116E428917A58007D837B /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659116E328917A58007D837B /* UIButtonExtension.swift */; };
 		F11956F22891392F0053176B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11956F12891392F0053176B /* AppDelegate.swift */; };
 		F11956F42891392F0053176B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11956F32891392F0053176B /* SceneDelegate.swift */; };
 		F11956F62891392F0053176B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11956F52891392F0053176B /* ViewController.swift */; };
@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		659116DE28916C9C007D837B /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIButtonExtension.swift; path = Alias/UIButtonExtension.swift; sourceTree = SOURCE_ROOT; };
+		659116E328917A58007D837B /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		F11956EE2891392F0053176B /* Alias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F11956F12891392F0053176B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F11956F32891392F0053176B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,26 +43,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		659116D428915ECB007D837B /* Models */ = {
+		659116E228917A26007D837B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				659116E328917A58007D837B /* UIButtonExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		659116E528917A76007D837B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		659116E628917A86007D837B /* Models */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		659116D528915ED6007D837B /* VIews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = VIews;
-			sourceTree = "<group>";
-		};
-		659116D628915EE4007D837B /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				659116DE28916C9C007D837B /* UIButtonExtension.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F11956E52891392F0053176B = {
@@ -84,9 +84,9 @@
 		F11956F02891392F0053176B /* Alias */ = {
 			isa = PBXGroup;
 			children = (
-				659116D628915EE4007D837B /* Extensions */,
-				659116D528915ED6007D837B /* VIews */,
-				659116D428915ECB007D837B /* Models */,
+				659116E628917A86007D837B /* Models */,
+				659116E528917A76007D837B /* Views */,
+				659116E228917A26007D837B /* Extensions */,
 				F11957082891398A0053176B /* Application */,
 				F1195707289139790053176B /* Controllers */,
 				F1195709289139F00053176B /* Resources */,
@@ -198,7 +198,7 @@
 				F11956F22891392F0053176B /* AppDelegate.swift in Sources */,
 				F119570C28914C300053176B /* RulesViewController.swift in Sources */,
 				F119570E28914C4F0053176B /* TopicViewController.swift in Sources */,
-				659116DF28916C9C007D837B /* UIButtonExtension.swift in Sources */,
+				659116E428917A58007D837B /* UIButtonExtension.swift in Sources */,
 				F119571028914C5D0053176B /* GameViewController.swift in Sources */,
 				F11956F42891392F0053176B /* SceneDelegate.swift in Sources */,
 			);
