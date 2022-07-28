@@ -8,3 +8,12 @@
 import Foundation
 import UIKit
 
+class TopicViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.backgroundColor = UIColor.yellow
+    }
+}
+
