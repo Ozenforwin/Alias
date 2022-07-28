@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		659116E428917A58007D837B /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659116E328917A58007D837B /* UIButtonExtension.swift */; };
 		F1132C8E2892ACB000BC16DE /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1132C8D2892ACB000BC16DE /* UIView + Extensions.swift */; };
+		F1132C902892B9DD00BC16DE /* UIStack + Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1132C8F2892B9DD00BC16DE /* UIStack + Views.swift */; };
 		F11956F22891392F0053176B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11956F12891392F0053176B /* AppDelegate.swift */; };
 		F11956F42891392F0053176B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11956F32891392F0053176B /* SceneDelegate.swift */; };
 		F11956F62891392F0053176B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11956F52891392F0053176B /* MainViewController.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		659116E328917A58007D837B /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		F1132C8D2892ACB000BC16DE /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
+		F1132C8F2892B9DD00BC16DE /* UIStack + Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStack + Views.swift"; sourceTree = "<group>"; };
 		F11956EE2891392F0053176B /* Alias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F11956F12891392F0053176B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F11956F32891392F0053176B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 			children = (
 				659116E328917A58007D837B /* UIButtonExtension.swift */,
 				F1132C8D2892ACB000BC16DE /* UIView + Extensions.swift */,
+				F1132C8F2892B9DD00BC16DE /* UIStack + Views.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1132C8E2892ACB000BC16DE /* UIView + Extensions.swift in Sources */,
+				F1132C902892B9DD00BC16DE /* UIStack + Views.swift in Sources */,
 				F11956F62891392F0053176B /* MainViewController.swift in Sources */,
 				F11956F22891392F0053176B /* AppDelegate.swift in Sources */,
 				F119570C28914C300053176B /* RulesViewController.swift in Sources */,
