@@ -17,9 +17,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             window = UIWindow(windowScene: windowScene)
             // Указываем файл с которого будет осуществляться загрузка, в нашем случае ViewController.
-            window?.rootViewController = ViewController()
+            window?.rootViewController = MainViewController()
             // Нам нужно отобразить его поэтому вызываем это свойство.
             window?.makeKeyAndVisible()
+            window?.overrideUserInterfaceStyle = .light
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
