@@ -18,6 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window = UIWindow(windowScene: windowScene)
             // Указываем файл с которого будет осуществляться загрузка, в нашем случае ViewController.
             window?.rootViewController = MainViewController()
+            window?.rootViewController = UINavigationController(rootViewController: MainViewController())
             // Нам нужно отобразить его поэтому вызываем это свойство.
             window?.makeKeyAndVisible()
             window?.overrideUserInterfaceStyle = .light
