@@ -11,8 +11,9 @@ import UIKit
 extension UIButton {
     class func createButton(title: String, height: CGFloat, color: UIColor, image: UIImage?) -> UIButton {
         
-        let button = UIButton()
+        let button = UIButton(type: .system)
         button.setTitle(title, for: .normal)
+        button.tintColor = UIColor.white
         button.backgroundColor = color
         button.layer.cornerRadius = 10
         button.titleLabel?.font = .systemFont(ofSize: 20)
