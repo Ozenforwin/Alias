@@ -10,12 +10,12 @@ import UIKit
 
 class GameViewController: UIViewController {
     //MARK: - let/var
-    var quizTimer = Timer()
+    var aliasTimer = Timer()
     var time = 60
-    
+
+    let aliasManager = AliasManager()
     //MARK: - Properties
     ///Главный стек-вью содержащий в себе Label и Button Stack.
-  
     private let stackButtonsView: UIStackView = {
         let stack = UIStackView()
         stack.translatesAutoresizingMaskIntoConstraints = false
@@ -55,28 +55,51 @@ class GameViewController: UIViewController {
     private let correctButton: UIButton = .createButton(title: "Правильно", height: 60, color: .systemGreen, image: nil)
     ///Красная кнопка пропуска вопроса
     private let skipButton: UIButton = . createButton(title: "Пропустить", height: 60, color: .systemRed, image: nil)
-    
+
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        localParse()
+        load()
         layout()
         startTimer()
         showAlertButton.addTarget(self, action: #selector(showAlertTapped), for: .touchUpInside)
+       
+       
     }
     
     //MARK: - Methods
+    
+    func load() {
+        loadJson(fromURLString: urlString) { (result) in
+            switch result {
+            case .success(let data):
+                parse(jsonData: data)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    func localParse() {
+    if let localData = readLocalFile(forName: "simpleJson") {
+        parse(jsonData: localData)
+    }
+    }
+    
     ///Функция запуска таймера
     private func startTimer() {
-        quizTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        aliasTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
 }
     private func stopTimer() {
-        quizTimer.invalidate()
+        aliasTimer.invalidate()
     }
     ///Счётчик таймера
     @objc func updateTimer() {
         if time > 0 {
             time -= 1
+            guessWordLabel.text = aliasManager.words.randomElement()
             timerLabel.text = formatTime()
         }  else if time == 0 {
             stopTimer()
@@ -111,15 +134,21 @@ class GameViewController: UIViewController {
                 style: .destructive,
                 handler: { _ in
                 print("Кнопка сброса в GameVc-Alert нажата")
+                let mainViewController = MainViewController()
                 self.dismiss(animated: true, completion: nil)
+                        self.modalPresentationStyle = .fullScreen
+                        self.present(mainViewController, animated: true)
             })
+         
         ///Добавление кнопки "Сбросить" в Alert
             alert.addAction(closeAction)
         ///Показать Alert
             present(alert, animated: true, completion: nil)
         }
+}
     
-    //MARK: - Layout
+    //MARK: - SetConstraints
+    extension GameViewController {
 private func layout() {
     ///Добавление lable-stack, button-stack в StackMain.
     [timerLabel, guessWordLabel, stackButtonsView].forEach
@@ -159,11 +188,6 @@ private func layout() {
     ])
 
 }
-    
-
-
-    
-    
-    
+    }
  ///END
-}
+
