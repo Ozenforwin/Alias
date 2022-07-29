@@ -15,13 +15,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             guard let windowScene = (scene as? UIWindowScene) else { return }
             
-            window = UIWindow(windowScene: windowScene)
-            // Указываем файл с которого будет осуществляться загрузка, в нашем случае ViewController.
-            window?.rootViewController = MainViewController()
-            // Нам нужно отобразить его поэтому вызываем это свойство.
+            let myWindow = UIWindow(windowScene: windowScene)
+            let navigationController = UINavigationController()
+            let viewController = MainViewController()
+
+            navigationController.viewControllers = [viewController]
+            myWindow.rootViewController = navigationController
+
+            self.window = myWindow
+            
             window?.makeKeyAndVisible()
-            window?.overrideUserInterfaceStyle = .light
-    }
+        }
 
     func sceneDidDisconnect(_ scene: UIScene) {
     }
