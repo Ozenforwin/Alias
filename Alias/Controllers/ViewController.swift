@@ -11,12 +11,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = .systemRed
         
         //MARK: - это для проверки как работает
+        title = "Меню"
         let image = UIImageView()
         image.image = UIImage(named: "Image")
-        let button: UIButton = .createButton(title: "Bla bla", height: 96, color: .systemGray3, image: image)
+        let button: UIButton = .createButton(title: "Bla bla", height: 100, color: .systemGray3, image: .init(named: "Image"))
         view.addSubview(button)
         button.addSubview(image)
         NSLayoutConstraint.activate([
@@ -24,6 +25,14 @@ class ViewController: UIViewController {
             button.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor),
             button.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, constant: -40)
         ])
+        
+        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        
+    }
+    
+    @objc private func buttonTapped(){
+        let topicViewController = TopicViewController()
+        navigationController?.pushViewController(topicViewController, animated: true)
     }
 }
 

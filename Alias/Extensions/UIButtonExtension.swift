@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension UIButton {
-    class func createButton(title: String, height: CGFloat, color: UIColor, image: UIImageView?) -> UIButton {
+    class func createButton(title: String, height: CGFloat, color: UIColor, image: UIImage?) -> UIButton {
         
         let button = UIButton()
         button.setTitle(title, for: .normal)
@@ -20,19 +20,24 @@ extension UIButton {
         button.clipsToBounds = true
         button.translatesAutoresizingMaskIntoConstraints = false
         
+        NSLayoutConstraint.activate([
+            button.heightAnchor.constraint(equalToConstant: height),
+        ])
+        
         //если есть картинка, то сетим ее на кнопку, если нет, то ничего не делаем
-        if let image = image {
-            button.addSubview(image)
-            image.translatesAutoresizingMaskIntoConstraints = false
+        let imageView = UIImageView()
+        imageView.tintColor = .white
+        imageView.image = image
+        
+            button.addSubview(imageView)
+            imageView.translatesAutoresizingMaskIntoConstraints = false
             
             NSLayoutConstraint.activate([
-                button.heightAnchor.constraint(equalToConstant: height),
-                image.widthAnchor.constraint(equalToConstant: 56),
-                image.heightAnchor.constraint(equalToConstant: 56),
-                image.centerYAnchor.constraint(equalTo: button.centerYAnchor),
-                image.leadingAnchor.constraint(equalTo: button.leadingAnchor, constant: 19)
+                imageView.widthAnchor.constraint(equalToConstant: 56),
+                imageView.heightAnchor.constraint(equalToConstant: 56),
+                imageView.centerYAnchor.constraint(equalTo: button.centerYAnchor),
+                imageView.leadingAnchor.constraint(equalTo: button.leadingAnchor, constant: 19)
             ])
-        }
         return button
     }
 }
