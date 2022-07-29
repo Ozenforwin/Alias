@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		659116E428917A58007D837B /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659116E328917A58007D837B /* UIButtonExtension.swift */; };
+		65BC9B3628919FFE00AEB21C /* TopicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BC9B3528919FFE00AEB21C /* TopicView.swift */; };
+		65BC9B382893EF9000AEB21C /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BC9B372893EF9000AEB21C /* UILabelExtension.swift */; };
+		65BC9B3A2893FF0C00AEB21C /* ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BC9B392893FF0C00AEB21C /* ExtensionViewController.swift */; };
 		F11956F22891392F0053176B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11956F12891392F0053176B /* AppDelegate.swift */; };
 		F11956F42891392F0053176B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11956F32891392F0053176B /* SceneDelegate.swift */; };
 		F11956F62891392F0053176B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11956F52891392F0053176B /* ViewController.swift */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		659116E328917A58007D837B /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		65BC9B3528919FFE00AEB21C /* TopicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicView.swift; sourceTree = "<group>"; };
+		65BC9B372893EF9000AEB21C /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
+		65BC9B392893FF0C00AEB21C /* ExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionViewController.swift; sourceTree = "<group>"; };
 		F11956EE2891392F0053176B /* Alias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F11956F12891392F0053176B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F11956F32891392F0053176B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +49,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		659116E228917A26007D837B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				659116E328917A58007D837B /* UIButtonExtension.swift */,
+				65BC9B372893EF9000AEB21C /* UILabelExtension.swift */,
+				65BC9B392893FF0C00AEB21C /* ExtensionViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		659116E528917A76007D837B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				65BC9B3528919FFE00AEB21C /* TopicView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		659116E628917A86007D837B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		F11956E52891392F0053176B = {
 			isa = PBXGroup;
 			children = (
@@ -60,28 +93,14 @@
 		F11956F02891392F0053176B /* Alias */ = {
 			isa = PBXGroup;
 			children = (
+				659116E628917A86007D837B /* Models */,
+				659116E528917A76007D837B /* Views */,
+				659116E228917A26007D837B /* Extensions */,
 				F11957082891398A0053176B /* Application */,
-				F11957052891396A0053176B /* Models */,
-				F1195706289139720053176B /* Views */,
 				F1195707289139790053176B /* Controllers */,
-				F119570A28913A580053176B /* Extensions */,
 				F1195709289139F00053176B /* Resources */,
 			);
 			path = Alias;
-			sourceTree = "<group>";
-		};
-		F11957052891396A0053176B /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		F1195706289139720053176B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		F1195707289139790053176B /* Controllers */ = {
@@ -112,13 +131,6 @@
 				F11956FA289139300053176B /* Assets.xcassets */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		F119570A28913A580053176B /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,7 +207,11 @@
 				F11956F22891392F0053176B /* AppDelegate.swift in Sources */,
 				F119570C28914C300053176B /* RulesViewController.swift in Sources */,
 				F119570E28914C4F0053176B /* TopicViewController.swift in Sources */,
+				65BC9B3628919FFE00AEB21C /* TopicView.swift in Sources */,
+				659116E428917A58007D837B /* UIButtonExtension.swift in Sources */,
+				65BC9B3A2893FF0C00AEB21C /* ExtensionViewController.swift in Sources */,
 				F119571028914C5D0053176B /* GameViewController.swift in Sources */,
+				65BC9B382893EF9000AEB21C /* UILabelExtension.swift in Sources */,
 				F11956F42891392F0053176B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,7 +353,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8GPVB9MQ58;
+				DEVELOPMENT_TEAM = 33389KCH5W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Alias/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -351,7 +367,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dyadichev.Alias;
+				PRODUCT_BUNDLE_IDENTIFIER = dyadichev.Alias812;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -366,7 +382,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8GPVB9MQ58;
+				DEVELOPMENT_TEAM = 33389KCH5W;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Alias/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -380,7 +396,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dyadichev.Alias;
+				PRODUCT_BUNDLE_IDENTIFIER = dyadichev.Alias812;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
