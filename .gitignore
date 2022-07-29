@@ -89,3 +89,8 @@ fastlane/test_output
 
 iOSInjectionProject/
 .DS_Store
+.DS_Store
+Alias.xcodeproj/project.pbxproj
+Alias.xcodeproj/xcshareddata/xcschemes/Alias.xcscheme
+Alias.xcodeproj/project.pbxproj
+Alias/Application/SceneDelegate.swift
